@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        N1: <input type="number" id="a" value=""><br />
+        N2: <input type="number" id="b" value=""><br />
+        N3: <input type="number" id="c" value=""><br />
+        N4: <input type="number" id="d" value=""><br />
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                var c = Number(document.getElementById('c').value);
+                var d = Number(document.getElementById('d').value);
+                
+                // implemente a partir daqui
+                //Exercício_1 
+                //Usando apenas os métodos de manipulação de String faça aparecer
+                //SAÍDA ESPERADA: Data: 16 de Oct de 2020
+                //SAÍDA ESPERADA: Hora: 09h15
+                /*
+                var data = new Date().toString();
+                var data = hoje.toString();
+                var dia = data.slice(8,10);
+                var mes = data.slice(4,7);
+                var ano = data.slice(11,15);
+                var hora = data.slice(16,18)
+                var minuto = data.slice(19,21)
+                var newFullDate = "Data: " + dia + " de " + mes + " de " + ano;
+                var newFullClock = "Hora: " + hora + "h" + minuto ;
+
+                document.getElementById('resultado').innerHTML = newFullDate +"<br>"+newFullClock;
+            }
+            */
+            //Exercício_2
+            //O programa irá realizar a operção da idade do usuário.
+            /*
+                var a = Number(document.getElementById('a').value); // ano
+                var b = Number(document.getElementById('b').value); // mes
+                var c = Number(document.getElementById('c').value); // dia
+                var d = Number(document.getElementById('d').value);
+                var nascimento = new Date(a,(b-1),c);
+                var idade = new Date().getFullYear() - nascimento.getFullYear();
+                document.getElementById('resultado').innerHTML = idade;
+            }
+            */
+             //Exercício_3
+            //O programa irá realizar a operção da media.
+            /*
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                var media = (a+b)/2;
+                var r = "A média entre os números "+a+" e " +b+ " é " + media.toFixed(4);
+                document.getElementById('resultado').innerHTML = r;
+            }
+            */
+            //Exercício_4
+            //O programa irá apresentar “A média entre os números e b é r”.
+            //O número apresentado deve possuir 2 casas decimais de precisão.
+
+                /*
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                var c = Number(document.getElementById('c').value);
+                var d = Number(document.getElementById('d').value);
+                var r = "A média ponderada (4, 5 e 6) entre os números "+a+", "+ b + " e " +c+ " é " +
+                mediaPonderada(a,b,c);
+                document.getElementById('resultado').innerHTML = r;
+            }
+            function mediaPonderada(a, b, c){
+            return Math.ceil((a*4+b*5+c*6)/15);
+            }
+                */
+                //Exercício_5
+                //Oprograma irá apresenta os numeros maior e o menor.
+
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                var c = Number(document.getElementById('c').value);
+                var d = Number(document.getElementById('d').value);
+                
+                var min = Math.min(a,b,c,d);
+                var max = Math.max(a,b,c,d);
+
+                var r = "O maior número é "+max+" e o menor número é "+ min;
+
+                document.getElementById('resultado').innerHTML = r;
+            }
+        </script>
+    </body>
+</html>
