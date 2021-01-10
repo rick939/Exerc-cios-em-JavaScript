@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+            <h1>Entrada do Programa</h1>
+            N1: <input type="number" id="a" value=""><br />
+            N2: <input type="number" id="b" value=""><br />
+            <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+
+            //Exercício_1
+            //verifica se o numero é positivo ou negativo.
+            //Se for igual a 0 retorna "O valor é zero".
+            /*
+            function executarExercicio() {
+                var a = Number(document.getElementById('a').value);
+                //var b = Number(document.getElementById('b').value);
+                                
+                var texto = "";
+                if(a == 0){
+                    texto = "o valor é zero";
+                }else if( a>0 ){
+                    texto = "Número positivo";
+                }else{
+                    texto = "Número negativo";
+                }
+                document.getElementById('resultado').innerHTML = texto;
+            }
+            */
+                //Exercício_2
+                //Usando o FOR, fazer a soma de todos os números de A até B.
+            
+                /*            
+                function executarExercicio() {
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                
+                //var a = Number(prompt("Informe o Valor de x"));
+                //var b = Number(prompt("Informe o Valor de y"));
+                
+                var soma = 0;
+
+                for(i=a; i<=b; i++){
+                    soma = soma + i;
+                }
+                    document.getElementById('resultado').innerHTML = soma;
+            }
+                */
+            //Exercício_3
+            //Usando o WHILE, fazer a soma de todos os números de A até B.
+            /*
+            function executarExercicio() {
+
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                
+                //var a = Number(prompt("Informe o Valor de x"));
+                //var b = Number(prompt("Informe o Valor de y"));
+              
+                var soma = 0;
+                
+                while(a <= b ){
+                    soma = soma + a;
+                    a++;
+                }
+                document.getElementById('resultado').innerHTML = soma;
+            }
+            */
+            //Exercício_4
+            //Usando o DO-WHILE, fazer a soma de todos os números de A até B.
+            /*
+            function executarExercicio() {
+
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                var soma = 0;
+
+                do {
+                    soma = soma + a;
+                    a++; 
+                }while(a <= b)
+                document.getElementById('resultado').innerHTML = soma;
+            
+            }
+            */
+
+            //Exercício_5
+            //um programa que receberá um número e que apresentará todos os seus divisores a
+            //partir do número 1. Os números devem estar um ao lado do outro.
+            /*
+            function executarExercicio() {
+
+                var a = Number(document.getElementById('a').value);
+                var t = "";
+
+                for(i=1;i<a;i++) {
+                    if(a%i==0) {
+                        t = t + i + " ";
+                    }
+                }
+                document.getElementById('resultado').innerHTML = t;
+            }
+            */
+            //Exercício_6
+            //O programa irá recebe dois números e apresenta a soma de todos os números
+            //pares e de todos os números ímpares entre os números fornecidos
+            //<-- Solução For -->
+            /*
+            function executarExercicio() {
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                var pares = 0;
+                var impares = 0;
+
+                for (i = a; i <= b; i++) {
+                    if (i % 2 == 0) {
+                        pares = pares + i;
+                    }else{
+                        impares = impares + i;
+                    }
+                }
+                var texto = "Soma dos números pares: " + pares + "<br>Soma dos números ímpares: " + impares;
+                document.getElementById('resultado').innerHTML = texto;
+            }
+            */
+            //<--Solução While-->
+            function executarExercicio() {
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                var pares = 0;
+                var impares = 0;
+                var i = a;
+
+                while (i <= b) {
+                    if (i % 2 == 0) {
+                        pares = pares + i;
+                    }else{
+                        impares = impares + i;
+                    }
+                    i++;
+                }
+                var texto = "Soma dos números pares: " + pares + "<br>Soma dos números ímpares: " + impares;
+                document.getElementById('resultado').innerHTML = texto;
+            }               
+        </script>
+    </body>
+</html>
