@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            //Exercíco - 1
+            //Construir um Array com recurção
+            /*
+            function executarExercicio() {
+                // implemente a partir daqui
+
+                var numeros = [];
+                var qtd = prompt("Quantos números você vai preencher no Array?")
+                lerNumeros(numeros, qtd);
+                document.getElementById('resultado').innerHTML = numeros;
+            }
+
+            function lerNumeros(n,q){
+                if(n.length == q){
+                    return n;
+                }else{
+                    var a = Number(prompt("Informe o número "+(n.length+1)+":"));
+                    n.push(a);
+                    lerNumeros(n,q);
+                }
+
+            }
+            */
+             //Exercício - 2
+            //O programa irá armazenar todos os números(exceto o zero).
+           //Até o zero ser inserido.
+            
+            function executarExercicio() {
+                // implemente apartir daqui
+                var numeros = [];
+                lerNumeros(numeros);
+
+                document.getElementById('resultado').innerHTML = numeros;    
+            }
+
+            function lerNumeros(n) {
+                var a = Number(prompt("Informe o número " + (n.length + 1) + ":"));
+                
+                if(a == 0) {
+                    return;
+                }else{
+                    n.push(a);
+                    lerNumeros(n);
+                }
+            }
+           
+        </script>
+    </body>
+</html>
