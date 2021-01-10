@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            //Exercício - 1
+            //Mostrar numeros inseridos no array e numeros ordenados do array
+           /*
+            function executarExercicio() {
+            // implemente a partir daqui
+            var numeros = [];
+
+            for (i = 0; i < 10; i++){
+                var a = Number(prompt("Informe o" + (i + 1) + "elemento:"));
+                numeros.push (a);
+            }
+        
+            var r = "Números recebidos " + numeros + "<br>"; // atribua o resultado dos seus algoritmos a r
+            r = r + "Números ordenados " + numeros.sort(comparar) + "<br />";
+
+            document.getElementById('resultado').innerHTML = r;
+            }
+
+            function comparar(a, b) {
+                return a - b;
+            }
+            */
+           //Exercício - 2
+           //Armezenar numeros até o 0 ser inserido.
+           //fazer as quantro operações com o maior e menor numero.
+           /*
+           function executarExercicio() {
+                var numeros = [];
+                var maior=0;
+                var menor=0;
+                var n = -1;
+
+                while( n != 0) {
+                    var n = Number(prompt("Informe um número"));
+                    if (n != 0){
+                            numeros.push(n);
+                        if (n > numeros[maior]){
+                            maior = numeros.length-1;
+                        }
+                        if (n < numeros[menor]){
+                            menor = numeros.length-1;
+                        }
+                    }
+                }
+                var r = "Números recebidos " + numeros + "<br />";
+                
+                r = r + numeros[maior] + " - " + numeros[menor] + " = " + (numeros[maior]-
+                numeros[menor]) + "<br />";
+
+                r = r + numeros[maior] + " + " + numeros[menor] + " = " +
+                (numeros[maior]+numeros[menor]) + "<br />";
+                
+                r = r + numeros[maior] + " * " + numeros[menor] + " = " +
+                (numeros[maior]*numeros[menor]) + "<br />";
+               
+                r = r + numeros[maior] + " / " + numeros[menor] + " = " +
+                (numeros[maior]/numeros[menor]) + "<br />";
+                
+                document.getElementById('resultado').innerHTML = r;
+            }
+            function comparar(a,b){
+               return a-b;
+            }
+            */
+           //Exercício
+           //montar uma matriz[10,5] e fazer a soma de uma coluna 
+            function executarExercicio() {
+                var mtz = [[],[],[],[],[],[],[],[],[],[]];
+                var n = -1;
+                var soma = 0;
+                var r = "";
+                    // Estrutura para receber e armazenar os dados da matriz
+                    //para i de 0 ate 9 faça
+                for(i=0; i<10; i++){
+                    for(j=0; j<5; j++){
+                        n = Number(prompt("Digite um número para a posição ("+(i+1)+","+(j+1)+"):"));
+                        //escreva "Digite um número para a posição ({i+1},{j+1})"
+                        mtz[i][j] = n;
+                    }
+                }
+                
+                n = Number(prompt("Qual coluna deseja somar?"));
+                
+                for(i=0; i<10; i++){
+                    soma = soma + mtz[i][n];
+                }
+                    r = "A soma dos elementos é "+soma;
+                document.getElementById('resultado').innerHTML = r;
+            }
+            
+        </script>
+    </body>
+</html>
