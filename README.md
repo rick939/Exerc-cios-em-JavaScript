@@ -1,1 +1,1 @@
-# Prime-iros -exerc-cios-em-JavaScript
+# Primeiros -exercios-em-JavaScript
